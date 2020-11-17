@@ -3070,6 +3070,8 @@ input, select, textarea {
 		}
 
 /* Header */
+		
+
 
 	#header {
 		-moz-transition: background-color 0.2s ease-in-out;
@@ -3102,6 +3104,8 @@ input, select, textarea {
 			#header h1 a {
 				border: 0;
 			}
+		
+		
 
 		#header nav {
 			font-family: Raleway, Helvetica, sans-serif;
@@ -4007,6 +4011,25 @@ input, select, textarea {
 		}
 
 /* Footer */
+	#boton1  {
+		padding: 5em 0 3em 0 ;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-direction: row;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-moz-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		margin: 0 auto;
+		width: 55em;
+		justify-content: center;
+		
+	}
 
 	#footer .inner {
 		padding: 5em 0 3em 0 ;
