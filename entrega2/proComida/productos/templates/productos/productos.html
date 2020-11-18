@@ -34,10 +34,10 @@
     <ul class="pagination">
       <!-- VOLVER ATRAS-->
         {% if productos.has_previous %}
-        <li ><a class="button small" href="?productos={{productos.previous_page_number}}" >Prev</a></li>
+        <li ><a class="button small" href="?productos={{productos.previous_page_number}}" >Anterior</a></li>
         </li>
         {% else %}
-        <li ><a class="button small disabled" href="?productos=1">Prev</a></li>
+        <li ><a class="button small disabled" href="?productos=1">Anterior</a></li>
         {% endif %}
     <!-- NUMERO DE PAGINA AL MEDIO -->
         {% for num in productos.paginator.page_range  %}
@@ -50,9 +50,9 @@
         {% endfor %}
         <!-- SIGUIENTE -->
         {% if productos.has_next %}
-        <li ><a class="button small" href="?productos={{productos.next_page_number}}" >Next</a></li>
+        <li ><a class="button small" href="?productos={{productos.next_page_number}}" >Siguiente</a></li>
         {% else %}
-        <li ><a class="button small disabled" href="?productos={{productos.paginator.num_pages}}"  >Next</a></li>
+        <li ><a class="button small disabled" href="?productos={{productos.paginator.num_pages}}"  >Siguiente</a></li>
         
         {% endif %}  
       </ul>
