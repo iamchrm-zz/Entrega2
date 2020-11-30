@@ -2,7 +2,7 @@ from django.shortcuts import render
 from typing import OrderedDict
 from django.db.models.fields import NullBooleanField
 from django.db.models.manager import EmptyManager
-from .models import Producto, ProductoP
+from .models import Producto
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 # Create your views here.
@@ -22,19 +22,3 @@ def productos(request):
         productos = paginator.page(paginator.num_page)
 
     return render(request,'productos/productos.html',{'productos':productos})
-
-def productosP(request):
-    
-    productosP = ProductoP.objects.all()
-    paginator = Paginator(productosP, 4)
-    productosP = request.GET.get('productosP')
-
-
-    try:
-        productosP = paginator.page(productosP)
-    except PageNotAnInteger:
-        productosP = paginator.page(1)
-    except EmptyPage:
-        productosP = paginator.page(paginator.num_page)
-
-    return render(request,'productos/productos.html',{'productosP':productosP})

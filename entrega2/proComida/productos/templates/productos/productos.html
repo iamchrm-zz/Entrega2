@@ -42,17 +42,17 @@
     <div class="tab-pane fade show active" id="pills-hamburguer" role="tabpanel" aria-labelledby="pills-hamburguer-tab">
         <div class="container">
             <div class="row">
-                {% for productoP in productosP %}
+                {% for producto in productos %}
                 <div class="col-lg-6 pb-5 pt-3">
                     <div class="card">
-                        <img src="{{productoP.image.url}}" class="card-img-top" alt="..." />
+                        <img src="{{producto.image.url}}" class="card-img-top" alt="..." />
                         <div class="card-body">
-                            <h5 class="card-title">{{productoP.title}}</h5>
+                            <h5 class="card-title">{{producto.title}}</h5>
                             <p class="card-text">
-                                {{productoP.description}}
+                                {{producto.description}}
                             </p>
-                            {% if productoP.link %}
-                            <a href="{{productoP.link}}" class="btn btn-primary">Go somewhere</a>
+                            {% if producto.link %}
+                            <a href="{{producto.link}}" class="btn btn-primary">Go somewhere</a>
                             {% endif %}	
                         </div>
                     </div>
@@ -65,16 +65,16 @@
 <div class="tab-pane fade" id="pills-pizza" role="tabpanel" aria-labelledby="pills-pizza-tab">
     <div class="container">
         <div class="row">
-            {% for productoP in productosP %}
+            {% for producto in productos %}
             <div class="col-lg-6 pb-5 pt-3">
                 <div class="card">
-                    <img src="{{productoP.image.url}}" class="card-img-top" alt="..." />
+                    <img src="{{producto.image.url}}" class="card-img-top" alt="..." />
                     <div class="card-body">
-                        <h5 class="card-title">{{productoP.title}}</h5>
+                        <h5 class="card-title">{{producto.title}}</h5>
                         <p class="card-text">
-                            {{productoP.description}}
+                            {{producto.description}}
                         </p>
-                        {% if productoP.link %}
+                        {% if producto.link %}
                         <a href="{{producto.link}}" class="btn btn-primary">Go somewhere</a>
                         {% endif %}	
                     </div>
