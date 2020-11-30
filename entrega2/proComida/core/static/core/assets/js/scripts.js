@@ -1,7 +1,7 @@
 $('#carousel').carousel({
     interval: 3000,
  })
-
+$('.toast').toast({ boundary: 'window' })
 
 
  var TxtType = function(el, toRotate, period) {

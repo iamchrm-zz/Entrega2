@@ -13,7 +13,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
     color: aliceblue;
 }
 
@@ -109,6 +110,11 @@ h5.first-text  {
 
 }
 
+h1.f {
+    font-weight: 700;
+    padding-top: 2%;
+    text-decoration: underline;
+}
 
 .blur {
     filter: blur(3px);
@@ -199,4 +205,13 @@ footer {
     text-align: center;
     padding-top: 2%;
 
+}
+
+.toast {
+    color: aliceblue;
+    background-color: aliceblue;
+}
+
+.toast-header {
+    color: aliceblue;
 }
