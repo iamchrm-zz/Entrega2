@@ -1,0 +1,54 @@
+{% extends 'core/baseproductos.html' %}
+{% block headers %}
+<h1><a href="{% url 'productos' %}">Productos</a></h1>
+{% endblock headers %}
+{% block banner %}
+<h2>¿Qué quieres comer hoy?</h2>
+<p>Disfruta de los mejores productos de nuestro catalogo.</p>
+{% endblock banner %}
+{% block productos %}
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<!-- Four -->
+							<section id="four" class="wrapper alt style1">
+								<div class="inner">
+									<section class="features">
+                                    {% for producto in productos %}
+										<article>	
+											<a href="#" class="image"><img src="{{producto.image.url}}" alt="" /></a>
+											<h3 class="major">{{producto.title}}</h3>
+											<p>{{producto.description}}</p>
+											{% if producto.link %}
+											<a href="#" class="special">Añadir al carro</a>
+											{% endif %}		
+										</article>
+                                          {% endfor %}
+									</section>
+								</div>
+					</section>
+					<hr>
+    <ul class="pagination">
+      <!-- VOLVER ATRAS-->
+        {% if productos.has_previous %}
+        <li ><a class="button small" href="?productos={{productos.previous_page_number}}" >Anterior</a></li>
+        </li>
+        {% else %}
+        <li ><a class="button small disabled" href="?productos=1">Anterior</a></li>
+        {% endif %}
+    <!-- NUMERO DE PAGINA AL MEDIO -->
+        {% for num in productos.paginator.page_range  %}
+          {% if productos.number == num  %}
+          <li   ><a class="page active" href="?productos={{ num }}">{{ num }}</a></li>
+          {% elif  num > productos.number|add:'-3' and num < productos.number|add:'10' %}
+           <li  ><a class="page" href="?productos={{ num }}">{{ num }}</a></li>
+          {% endif %}
+        {% endfor %}
+        <!-- SIGUIENTE -->
+        {% if productos.has_next %}
+        <li ><a class="button small" href="?productos={{productos.next_page_number}}" >Siguiente</a></li>
+        {% else %}
+        <li ><a class="button small disabled" href="?productos={{productos.paginator.num_pages}}"  >Siguiente</a></li>
+        {% endif %}  
+      </ul>
+    </nav>
+              {% endblock productos %}  

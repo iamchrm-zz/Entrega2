@@ -1,0 +1,202 @@
+html,
+body {
+    background-color: #212529;
+    
+}
+
+.invert {
+    filter: invert(100%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: aliceblue;
+}
+
+/*  NAVBAR CONFIG*/
+
+
+.navbar-expand-lg .navbar-collapse {
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(247,247,247)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar-toggler {
+    border-color: white;
+}
+
+a.nav-link {
+    color: white;
+    text-decoration: wavy;
+}
+
+a.navbar-brand {
+    color: white;
+}
+
+nav.navbar-expand-lg {
+    background-color: #18181b;
+    font-weight: 600;
+}
+
+/*  carousel */
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+.carousel {
+  
+    -webkit-box-orient   : vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction   : column;
+    flex-direction       : column;
+    -webkit-transition   : all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition        : all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition           : all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    overflow             : hidden;
+    -webkit-box-shadow   : 1px 1px 25px #18181b, 0px 0px 25px #18181b;
+    box-shadow           : 1px 1px 25px #18181b, -1px 10px 25px #18181b;
+    border-radius: 50px 50px 50px 50px;
+    margin-top: 3%;
+    width: 70%;
+    
+}
+
+img.d-block.w-100 {
+    filter: blur(0.3em);
+}
+
+div.carousel-caption  {
+    position: absolute;
+    right: 15%;
+    top: 10%;
+    bottom: 20px;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+h5.first-text  {
+    font-size: 2.0em;
+    color: rgb(228, 233, 238);
+    background: rgba(24, 24, 27, 0.8);
+    border-radius: 30px 30px 30px 30px;
+    -webkit-box-orient   : vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction   : column;
+    flex-direction       : column;
+    -webkit-transition   : all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition        : all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition           : all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    overflow             : hidden;
+
+}
+
+
+.blur {
+    filter: blur(3px);
+}
+
+@media (min-width: 100px) and (max-width: 850px) {
+    h5.first-text  {
+        font-size: 1.0em;
+        border-radius: 10px 10px 10px 10px;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 3000px) {
+    div.view {
+        height: 2.5em;
+    }
+
+    .marketing h2 {
+        font-weight: 600;
+        font-size: 2.5em;
+    }
+
+    .marketing .col-lg-4 p {
+        color: aliceblue;
+        margin-right: .75rem;
+        margin-left : .75rem;
+        font-size: 1.1em;
+    }
+}
+
+@media (min-width: 100px) and (max-width: 850px) {
+    .carousel {
+        width: 100%;
+    }
+}
+
+
+/* MARKETING SECTION */
+
+.marketing .col-lg-4 {
+    margin-top   : 2%;
+    margin-bottom: 1.5rem;
+    text-align   : center;
+    
+}
+
+.marketing h2 {
+    font-weight: 600;
+    
+}
+
+.marketing .col-lg-4 p {
+    color: aliceblue;
+    margin-right: .75rem;
+    margin-left : .75rem;
+}
+
+.card {
+    background-color: #18181b;
+    -webkit-box-orient   : vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction   : column;
+    flex-direction       : column;
+    -webkit-transition   : all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition        : all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition           : all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    overflow             : hidden;
+    -webkit-box-shadow   : 1px 1px 25px #18181b, 0px 0px 25px #18181b;
+    box-shadow           : 1px 1px 25px #18181b, -1px 10px 25px #18181b;
+    border-radius: 10px 10px 10px 10px;
+}
+
+label {
+    color: aliceblue;
+}
+
+footer {
+    color: aliceblue;
+    background-color: #18181b;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 1%;
+    
+}
+
+#hello {
+    text-align: center;
+    padding-top: 2%;
+
+}

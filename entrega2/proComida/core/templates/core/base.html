@@ -1,147 +1,332 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>{% block title %}{% endblock %}</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		
-		{% load static %}
-		<link rel="stylesheet" href="{% static 'core/assets/css/main.css' %}" />
-		<noscript><link rel="stylesheet" href="{% static 'core/assets/css/noscript.css' %}" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="/entrega2/proComida/core/static/core/assets/css/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>¡Haz tu pedido con nosotros ahora! - RapidosYSabrosos</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="#">
+        <img
+          src="https://img.icons8.com/pastel-glyph/48/000000/hamburger.png"
+          class="invert"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="index.html">{% block headers %}{% endblock headers %}</a></h1>
-						<nav>
-							<a href="#menu">Menú</a>
-						</nav>
-					</header>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >INICIO <span class="sr-only">(current)</span></a
+            >
+          </li>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<div class="inner">
-							<h2>Menu</h2>
-							<ul class="links">
-								<li><a href="{% url 'home' %}">Inicio</a></li>
-								<li><a href="{% url 'productos' %}">Productos</a></li>
-								<li><a href="{% url 'home' %}">Próximamente</a></li>
-								
-							</ul>
-							<a href="#" class="close">Close</a>
-						</div>
-					</nav>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              MENU RÁPIDO
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#reservacion">Reservación</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#nosotros">Nosotros</a>
+              <a class="dropdown-item" href="#contacto">Contacto</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link btn btn-danger animate__animated animate__pulse animate__infinite"
+              href="#"
+              >PRODUCTOS</a
+            >
+          </li>
+        </ul>
+        <div class="navbar-collapse collapse w-100 order-4 dual-collapse2">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href=""
+                ><i class="fa fa-facebook fa-lg mr-1"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href=""
+                ><i class="fa fa-twitter fa-lg mr-1"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href=""
+                ><i class="fa fa-instagram fa-lg mr-1"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href=""
+                ><i class="fa fa-github fa-lg mr-1"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
+    <h1 id="hello">
+      <a
+        href=""
+        class="typewrite text-white"
+        data-period="2000"
+        data-type='[ "¡Hola, somos rapidos y sabrosos!", "Revisa todo nuestro catologo de comidas.", "¡Visitanos!", "¡Pide tu comida a tu hogar!" ]'
+      >
+        <span class="wrap"></span>
+      </a>
+    </h1>
 
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<div class="logo"><span class="icon"><i class="fas fa-utensils"></i></span></div>
-							{% block banner %}{% endblock banner %}
-						</div>
-					</section>
+    <div class="container">
+      <div
+        id="carousel"
+        class="carousel slide animate__animated animate__fadeIn"
+        data-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              class="d-block w-100"
+              src="https://lh3.googleusercontent.com/DHc270gTIZtJvQAP-yQWN8sOvVllYjygmeCC0e7VW1tGpkRVbCH7BWO9gNrRmAj31flNQ_RGl9RaDLcvqN8OG90dcBf0asdq9YZwDW4zeyW278wMoKPyF-qhLGgXKbvd-zTTqIw542cNRWQ7K7F5fomIqdea_dh_7ctDHwPS8r6_1G5sXAumVPLsfoC6fUkgKwAyejqh18LSisRdXi9kDawoG6zBpJdA0d3fBYiBEOGofy1BqfhlNT-KlIoYWKixTpjPnZ_pw3uUPMgJMvMg549BaGDTbwWAuXvioDytPmE84jxn0CfmVg3Ptp522YauTSJAtnwITylgp6WaX6jumzaLEpcKdgN2FhN0w0gHOs_hceZ1fJtCksgiN8G6NpVWUmwF8KZxSXlquUbyVj9f4FD_n-anFfzpZ9OQdkcFfuxqvzxFBICrrZ7i-1-74RNGfeLlS4c0DhEKMbxRcAqR-uYqUtaPaaMoZbdgk0ZwqpmgtCPdPRD9n7XLxW_u6mAnb_Bv3Xas8H3x5tFjtXrYP-9ffQrMot2rNPmyGhTlfb2wlqKy9agEXnKgbqzyY_v9UX386pEtSZEok9vbBawZPNuDa4jWhoJxNBEp3mx49mPKKrbvZLQg7aJgf1c_EQQJDv_8YVUw9xGguT72R7FNH0hDWqYSH1r3F0mvBPdwecFdxpy0SXwutH-4i_2u=w784-h441-no?authuser=1"
+              alt="First slide"
+            />
+            <div class="carousel-caption">
+              <h5 class="first-text animate__animated animate__backInUp">
+                Bienvenido, disfruta de nuestra variedad de sabrosos productos
+              </h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="https://lh3.googleusercontent.com/rqPFo2XnaBre2yopKjx6U0p7Q0dG76RKz3w879NBtmgkV2jS6KYj_zo7PPTbDsWIrpavQKOFYcnGDxPZnKZkBMt1O-KiypWegZHo8z_IOzYGg6RFt0lOSOJWfhMfmW6gljiX680ZKJnGjKzgC2AROkSdxfY1Gyr9hxXuugyFxYsT4G9vP-fzSiJ78BXyf7BKn38b94wxHUGlcWMkkiyFb3GNV57-LZVjnx0gUVIhq1iB1Fo9pjH5bGmqOOGjwl7BbwU0VQhNtj9SmJuBM8Ddzrdg8OLMROVjUjKoMIUQIxl_HfpLn7vLWzloXy28rGXl0WGUWyaJWxhhHmEq6EtxHzvElcOa0lJzBKGWBXZuCIvE8OO1X42WpPiKZRgq5cNLYY-AaF-7FJ1UcYv82CvuL6qkEw8Wgf0jd3txDv1z3EPtaFfqqREtlrR9sR5PmLLSTTPWZSkhQXqL5DroaoKb6kq8MMFgHioe2j_l0PXm17rJsH2HTgO-09WFM8vJCdZgT8bBJK2WQRMjOYf5e96Y0vopNptzGcPF2F_4KL3u9dIXL-HUDPFjMO5UvNZC0qgSEzDL5Q3bR2dquOsnAeuJdjCgoEI8WN-vheCMHKyYkN6Nk2AqiXEXTH7Uflo6HRyMRsNYcgbf-dqvkhP45UtBk7FswxAzlv5TdxC3-vIsy-6Iui--lJ0qDLITeJPH=w1001-h563-no?authuser=1"
+              alt="Second slide"
+            />
+            <div class="carousel-caption">
+              <h5 class="first-text animate__animated animate__backInLeft">
+                Las mejores carnes con altos indices de calidad
+              </h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="https://lh3.googleusercontent.com/PyJtjaPVzjy9233J6Ntp2tSdJEXQDPBp1ZUjA6y36wIIGuTq6td20r8ytlz4fCK1pVv8aV0TMEk1zVoOkpWpYZb00JunvqfJ27inIb0PJGbKbZLHuy24Ju0IbP-t8Cba-0rQzpHpVgQMa0ql030Efo_ND_V241z0aAUUkPK6-F4MCtq6Jnw85gzc23De_LIU2hwXkHQP7ofzE_NBlLGTKAYyndEsY-Tky40VjfUdO_lR3NwCCDtatkhrIbgfmFlmxHZBOOY7fUoxUjnp3Vf43Wv_lfuphw2bOTeA0Agj9of4F49icQNgH5CBXAHZQbqIkNHfzrQy8CZyLKG_5xFxm8kNtE3y4UmveBdECvKTc1viOjdEegoSoNFHSHi3p44wZOFW13yioSsUYrdrzxn_lXfEIMqe_S8sJ4OAF3Ffm8J2JJpJtSVkD2piBc4C8kEafj0bQ9Vx4mnWUQaOHbjU7x2b21G09GCHIJcw-6HhvkP-Tf4cGWdgyQbnauSdtssZ2Ix4DyVBk6e3XKZXd75MfPSftN-hY0UbQSqmMweM5KAhu12Ggs6m9GkD0u-CrC8mDuKbL6xnQRKdRswCmUoQ5vpQSPBDHxm4Z-8M9sTQQiulSmd0Gwl0--Fe4DewvpLSA0P4NoUTreVj_fOLzxsoP58t-jDl2uM1p549Nvgc8_dSqf0HOfsArZubc7Wb=w1001-h563-no?authuser=1"
+              alt="Third slide"
+            />
+            <div class="carousel-caption">
+              <h5 class="first-text animate__animated animate__backInRight">
+                ¿Vegetariano? ¡Tambien tenemos carnes veganas!
+              </h5>
+            </div>
+          </div>
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#carousel"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carousel"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
 
-				<!--                             INICIO TRADUCIR                               -->
-					<section id="wrapper">
-						<!-- One -->
-							<section id="one" class="wrapper spotlight style1">
-								<div class="inner">
-									<a href="#" class="image"><img src="{% static 'core/img/hamb.jpg' %}" width="276" heigth="276"/></a>
-									<div class="content">
-									{% block wrapper1 %}
-									{% endblock wrapper1 %}
-									</div>
-								</div>
-							</section>
-						<!-- Two -->
-							<section id="two" class="wrapper alt spotlight style2">
-								<div class="inner">
-									<a href="#" class="image"><img src="{% static 'core/img/Pizza2.jpg' %}" alt="" /></a>
-									<div class="content">
-										{% block wrapper2 %}
-										{% endblock wrapper2 %}
-									</div>
-								</div>
-							</section>
+    <div class="container marketing">
+      <div class="row">
+        <div class="col-lg-4 animate__animated animate__backInLeft">
+          <div class="icono-rapido1">
+            <img
+              src="https://img.icons8.com/pastel-glyph/96/000000/delivery-scooter--v1.png"
+              class="invert animate__animated animate__tada animate__infinite animate__slow animate__delay-2s"
+            />
+          </div>
+          <h2>Delivery</h2>
+          <p>
+            Acceda al contenido de forma segura desde 59 países con la VPN más
+            rápida del planeta. Con más de 5400 servidores y el protocolo Locker
+            ultrarrápido, Proxy Locker le ofrece la velocidad que necesita para
+            ver vídeos, jugar y explorar online.
+          </p>
+        </div>
+        <div class="col-lg-4 col-lg-4 animate__animated animate__backInDown">
+          <div class="icono-rapido2">
+            <img
+              src="https://img.icons8.com/ios-glyphs/100/000000/heart-health.png"
+              class="invert animate__animated animate__tada animate__infinite animate__slow animate__delay-2s"
+            />
+          </div>
+          <h2>Calidad</h2>
+          <p>
+            Pulse el botón Conexión rápida y escogeremos el servidor más rápido
+            para usted. Si su conexión se cae, el Kill Switch deshabilitará
+            Internet para proteger sus datos privados. Configure la aplicación
+            Proxy Locker para que se conecte automáticamente a un servidor
+            cuando se una a cualquier red Wi-Fi.
+          </p>
+        </div>
+        <div class="col-lg-4 animate__animated animate__backInRight">
+          <div class="icono-rapido3">
+            <img
+              src="https://img.icons8.com/fluent-systems-filled/100/000000/iphone.png"
+              class="invert animate__animated animate__tada animate__infinite animate__slow animate__delay-2s"
+            />
+          </div>
+          <h2>Confianza</h2>
+          <p>
+            Proxy Locker funciona en todas las plataformas principales y en
+            todos sus gadgets favoritos. Una sola cuenta le permite conectar
+            hasta 6 dispositivos a la vez. Protéjalos todos, en cualquier
+            combinación. ¿Necesita más? Configure Proxy Locker en su router
+            inalámbrico.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container pb-4">
+      <div id="reservacion">
+        <div class="card col-lg-12">
+          <h1 class="text-center pt-1">RESERVA TU MESA</h1>
+          <form class="pb-2">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">CORREO</label>
+                <input type="email" class="form-control" id="inputEmail4" />
+                <small id="emailHelp" class="form-text text-muted"
+                  >Te enviarémos por email la reservacion</small
+                >
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">RUN</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="inputPassword4"
+                />
+                <small id="emailHelp" class="form-text text-muted"
+                  >Es requerido para validar la reservación</small
+                >
+              </div>
+            </div>
+            <div class="form-group col-md-12">
+              <label for="inputState">Nº DE MESA</label>
+              <select id="inputState" class="form-control">
+                <option selected>selecciona una...</option>
+                <option>...</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="gridCheck"
+                />
+                <label class="form-check-label" for="gridCheck">
+                  He revisado la información entregada considerando que no es
+                  posible realiazar cambios.estoy de acuerdo con los terminos y
+                  condiones de los servicios.
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="gridCheck"
+                />
+                <label class="form-check-label" for="gridCheck">
+                  Estoy de acuerdo con los terminos y condiciones de los
+                  servicios.
+                </label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-danger">
+              Enviar reservacion
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Site footer -->
+    <footer class="site-footer">
+      <div class="col-md-12">
+        <p class="copyright-text">
+          Copyright &copy; 2020 All Rights Reserved by
+          <a href="#">nadie</a>.
+        </p>
+      </div>
+    </footer>
 
-						<!-- Three -->
-							<section id="three" class="wrapper spotlight style3">
-								<div class="inner">
-									<a href="#" class="image"><img src="{% static 'core/img/vegan.jpg' %}" alt="" /></a>
-									<div class="content">
-										{% block wrapper3 %}
-										{% endblock wrapper3 %}
-									</div>
-								</div>
-							</section>
-							<!--                 FIN TRADUCIR                   -->		
+    <!-- Optional JavaScript; choose one of the two! -->
 
-				<!--               INICIO NO EDITAR                    -->		
-				<section id="boton1">
-				<a href="{% url 'productos' %}" class="button" >¡VER PRODUCTOS!</a>
-				</section>
-				<!--                FIN  NO EDITAR                    -->		
-				<!-- Footer 
-				TRADUCTIR ESTO A ESPAÑOL CABROS
-				-->
-					<section id="footer">
-						<div class="inner">
-							<h2 class="major">Contáctanos</h2>
-							<p>Somos una empresa dedicada a la atención a nuestros clientes entregándoles
-								los mejores servicios de nuestra gran gama de variedades de comida,
-								bajo los grandes dominios y conocimientos de nuestros chefs,
-								dando asíi una satisfacción garantizada a nuestros clientes, 
-								tanto por el gran sabor y nuestra vigurosidad al preparar detalladamente cada pedido.</p>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Nombre</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Correo electrónico</label>
-										<input type="email" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Mensaje</label>
-										<textarea name="message" id="message" rows="4"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Enviar Mensaje" /></li>
-								</ul>
-							</form>
-							<ul class="contact">
-								<li class="icon solid fa-home">
-									Rápidos y Sabrosos<br />
-									1234 Somewhere Road Suite #2894<br />
-									Nashville, TN 23313-54143
-								</li>
-								<li class="icon solid fa-phone">(562) 654-25564</li>
-								<li class="icon solid fa-envelope"><a href="#">información@rapidosysabrosos.com</a></li>
-								<li class="icon brands fa-twitter"><a href="#">twitter.com/rapidosysabrosos</a></li>
-								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/rapidosysabrosos</a></li>
-								<li class="icon brands fa-instagram"><a href="#">instagram.com/rapidosysabrosos</a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Rápidos y Sabrosos. Todos los derechos reservados.</li>
-							</ul>
-						</div>
-					</section>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="{% static 'core/assets/js/jquery.min.js' %}"></script>
-			<script src="{% static 'core/assets/js/jquery.scrollex.min.js' %}"></script>
-			<script src="{% static 'core/assets/js/browser.min.js'%}"></script>
-			<script src="{% static 'core/assets/js/breakpoints.min.js' %}"></script>
-			<script src="{% static 'core/assets/js/util.js' %}"></script>
-			<script src="{% static 'core/assets/js/main.js' %}"></script>
-
-	</body>
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/entrega2/proComida/core/static/core/assets/js/scripts.js"></script>
+  </body>
 </html>
