@@ -1,0 +1,148 @@
+{% extends 'core/productos.html' %} {% block productos %}
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+        {% if productos.has_previous %}
+      <li class="page-item">
+        <a class="page-link" href="?productos={{productos.previous_page_number}}" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      {% else %}
+      <li class="page-item disabled">
+        <a class="page-link" href="?productos=1" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      {% endif %}
+      {% for num in productos.paginator.page_range  %}
+      {% if productos.number == num  %}
+      <li class="page-item active"><a class="page-link" href="?productos={{ num }}">{{ num }}</a></li>
+      {% elif  num > productos.number|add:'-3' and num < productos.number|add:'10' %}
+      <li class="page-item disabled"><a class="page-link" href="?productos={{ num }}">{{ num }}</a></li>
+      {% endif %}
+      {% endfor %}
+      {% if productos.has_next %}
+      <li class="page-item">
+        <a class="page-link" href="?productos={{productos.next_page_number}}" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+      {% else %}
+      <li class="page-item disabled">
+        <a class="page-link" href="?productos={{productos.paginator.num_pages}}" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+      {% endif %} 
+    </ul>
+  </nav>
+
+<div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-hamburguer" role="tabpanel" aria-labelledby="pills-hamburguer-tab">
+        <div class="container">
+            <div class="row">
+                {% for producto in productos %}
+                <div class="col-lg-6 pb-5 pt-3">
+                    <div class="card">
+                        <img src="{{producto.image.url}}" class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">{{producto.title}}</h5>
+                            <p class="card-text">
+                                {{producto.description}}
+                            </p>
+                            {% if producto.link %}
+                            <a href="{{producto.link}}" class="btn btn-primary">Go somewhere</a>
+                            {% endif %}	
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+<div class="tab-pane fade" id="pills-pizza" role="tabpanel" aria-labelledby="pills-pizza-tab">
+    <div class="container">
+        <div class="row">
+            {% for producto in productos %}
+            <div class="col-lg-6 pb-5 pt-3">
+                <div class="card">
+                    <img src="{{producto.image.url}}" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">{{producto.title}}</h5>
+                        <p class="card-text">
+                            {{producto.description}}
+                        </p>
+                        {% if producto.link %}
+                        <a href="{{producto.link}}" class="btn btn-primary">Go somewhere</a>
+                        {% endif %}	
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="tab-pane fade" id="pills-veganas" role="tabpanel" aria-labelledby="pills-veganas-tab">
+    <div class="container">
+        <div class="row">
+            {% for producto in productos %}
+            <div class="col-lg-6 pb-5 pt-3">
+                <div class="card">
+                    <img src="{{producto.image.url}}" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">{{producto.title}}</h5>
+                        <p class="card-text">
+                            {{producto.description}}
+                        </p>
+                        {% if producto.link %}
+                        <a href="{{producto.link}}" class="btn btn-primary">Go somewhere</a>
+                        {% endif %}	
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+    </div>
+</div>
+</div>
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+        {% if productos.has_previous %}
+      <li class="page-item">
+        <a class="page-link" href="?productos={{productos.previous_page_number}}" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      {% else %}
+      <li class="page-item disabled">
+        <a class="page-link" href="?productos=1" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      {% endif %}
+      {% for num in productos.paginator.page_range  %}
+      {% if productos.number == num  %}
+      <li class="page-item active"><a class="page-link" href="?productos={{ num }}">{{ num }}</a></li>
+      {% elif  num > productos.number|add:'-3' and num < productos.number|add:'10' %}
+      <li class="page-item disabled"><a class="page-link" href="?productos={{ num }}">{{ num }}</a></li>
+      {% endif %}
+      {% endfor %}
+      {% if productos.has_next %}
+      <li class="page-item">
+        <a class="page-link" href="?productos={{productos.next_page_number}}" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+      {% else %}
+      <li class="page-item disabled">
+        <a class="page-link" href="?productos={{productos.paginator.num_pages}}" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+      {% endif %} 
+    </ul>
+  </nav>
+
+{% endblock productos %}
