@@ -6,6 +6,8 @@ from .models import Producto
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 # Create your views here.
+def productos(request):
+    return render(request,'productos/productos.html')
 
 def productos(request):
     

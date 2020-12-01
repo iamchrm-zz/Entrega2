@@ -52,7 +52,9 @@
                                 {{producto.description}}
                             </p>
                             {% if producto.link %}
-                            <a href="{{producto.link}}" class="btn btn-primary">Go somewhere</a>
+                            <a href="{{producto.link}}" class="btn btn-primary">Añadir</a>
+                            {% else %}
+                            <a href="{{producto.link}}" class="btn btn-primary disabled">Sin stock</a>
                             {% endif %}	
                         </div>
                     </div>
@@ -65,44 +67,48 @@
 <div class="tab-pane fade" id="pills-pizza" role="tabpanel" aria-labelledby="pills-pizza-tab">
     <div class="container">
         <div class="row">
-            {% for producto in productos %}
-            <div class="col-lg-6 pb-5 pt-3">
-                <div class="card">
-                    <img src="{{producto.image.url}}" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">{{producto.title}}</h5>
-                        <p class="card-text">
-                            {{producto.description}}
-                        </p>
-                        {% if producto.link %}
-                        <a href="{{producto.link}}" class="btn btn-primary">Go somewhere</a>
-                        {% endif %}	
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
+          {% for producto in productos %}
+          <div class="col-lg-6 pb-5 pt-3">
+              <div class="card">
+                  <img src="{{producto.image.url}}" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                      <h5 class="card-title">{{producto.title}}</h5>
+                      <p class="card-text">
+                          {{producto.description}}
+                      </p>
+                      {% if producto.link %}
+                      <a href="{{producto.link}}" class="btn btn-primary">Añadir</a>
+                      {% else %}
+                      <a href="{{producto.link}}" class="btn btn-primary disabled">Sin stock</a>
+                      {% endif %}	
+                  </div>
+              </div>
+          </div>
+          {% endfor %}
         </div>
     </div>
 </div>
 <div class="tab-pane fade" id="pills-veganas" role="tabpanel" aria-labelledby="pills-veganas-tab">
     <div class="container">
         <div class="row">
-            {% for producto in productos %}
-            <div class="col-lg-6 pb-5 pt-3">
-                <div class="card">
-                    <img src="{{producto.image.url}}" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">{{producto.title}}</h5>
-                        <p class="card-text">
-                            {{producto.description}}
-                        </p>
-                        {% if producto.link %}
-                        <a href="{{producto.link}}" class="btn btn-primary">Go somewhere</a>
-                        {% endif %}	
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
+          {% for producto in productos %}
+          <div class="col-lg-6 pb-5 pt-3">
+              <div class="card">
+                  <img src="{{producto.image.url}}" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                      <h5 class="card-title">{{producto.title}}</h5>
+                      <p class="card-text">
+                          {{producto.description}}
+                      </p>
+                      {% if producto.link %}
+                      <a href="{{producto.link}}" class="btn btn-primary">Añadir</a>
+                      {% else %}
+                      <a href="{{producto.link}}" class="btn btn-primary disabled">Sin stock</a>
+                      {% endif %}	
+                  </div>
+              </div>
+          </div>
+          {% endfor %}
     </div>
 </div>
 </div>
