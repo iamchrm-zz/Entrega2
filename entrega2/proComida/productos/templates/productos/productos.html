@@ -42,14 +42,14 @@
     <div class="tab-pane fade show active" id="pills-hamburguer" role="tabpanel" aria-labelledby="pills-hamburguer-tab">
         <div class="container">
             <div class="row">
-                {% for producto in productos %}
+                {% for postp in posts %}
                 <div class="col-lg-6 pb-5 pt-3">
                     <div class="card">
                         <img src="{{producto.image.url}}" class="card-img-top" alt="..." />
                         <div class="card-body">
-                            <h5 class="card-title">{{producto.title}}</h5>
+                            <h5 class="card-title">{{postp.title}}</h5>
                             <p class="card-text">
-                                {{producto.description}}
+                                {{postp.description}}
                             </p>
                             {% if producto.link %}
                             <a href="{{producto.link}}" class="btn btn-primary">Añadir</a>
