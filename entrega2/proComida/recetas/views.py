@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Recetas
+from .models import Receta
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 # Create your views here.
 def recetas(request):
@@ -7,7 +7,7 @@ def recetas(request):
 
 def recetas(request):
     
-    recetas = Recetas.objects.all()
+    recetas = Receta.objects.all()
     paginator = Paginator(recetas, 4)
     recetas = request.GET.get('recetas')
 
