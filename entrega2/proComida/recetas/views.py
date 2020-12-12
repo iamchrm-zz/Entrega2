@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Receta
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+
 # Create your views here.
 def recetas(request):
     return render(request,'recetas/recetas.html')

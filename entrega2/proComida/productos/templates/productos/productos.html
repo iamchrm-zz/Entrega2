@@ -42,14 +42,17 @@
     <div class="tab-pane fade show active" id="pills-hamburguer" role="tabpanel" aria-labelledby="pills-hamburguer-tab">
         <div class="container">
             <div class="row">
-                {% for postp in posts %}
+                {% for producto in productos %}
                 <div class="col-lg-6 pb-5 pt-3">
                     <div class="card">
                         <img src="{{producto.image.url}}" class="card-img-top" alt="..." />
                         <div class="card-body">
-                            <h5 class="card-title">{{postp.title}}</h5>
+                            <h5 class="card-title">{{producto.title}}</h5>
                             <p class="card-text">
-                                {{postp.description}}
+                                {{producto.description}}
+                            </p>
+                          <p class="card-text">
+                                Este producto fue añadido por {{producto.author}}
                             </p>
                             {% if producto.link %}
                             <a href="{{producto.link}}" class="btn btn-primary">Añadir</a>
@@ -68,23 +71,26 @@
     <div class="container">
         <div class="row">
           {% for producto in productos %}
-          <div class="col-lg-6 pb-5 pt-3">
-              <div class="card">
-                  <img src="{{producto.image.url}}" class="card-img-top" alt="..." />
-                  <div class="card-body">
-                      <h5 class="card-title">{{producto.title}}</h5>
-                      <p class="card-text">
-                          {{producto.description}}
-                      </p>
-                      {% if producto.link %}
-                      <a href="{{producto.link}}" class="btn btn-primary">Añadir</a>
-                      {% else %}
-                      <a href="{{producto.link}}" class="btn btn-primary disabled">Sin stock</a>
-                      {% endif %}	
-                  </div>
-              </div>
-          </div>
-          {% endfor %}
+                <div class="col-lg-6 pb-5 pt-3">
+                    <div class="card">
+                        <img src="{{producto.image.url}}" class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">{{producto.title}}</h5>
+                            <p class="card-text">
+                                {{producto.description}}
+                            </p>
+                          <p class="card-text">
+                                Este producto fue añadido por {{producto.author}}
+                            </p>
+                            {% if producto.link %}
+                            <a href="{{producto.link}}" class="btn btn-primary">Añadir</a>
+                            {% else %}
+                            <a href="{{producto.link}}" class="btn btn-primary disabled">Sin stock</a>
+                            {% endif %}	
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
         </div>
     </div>
 </div>
@@ -150,5 +156,4 @@
       {% endif %} 
     </ul>
   </nav>
-
 {% endblock productos %}

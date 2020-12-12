@@ -2,7 +2,7 @@
 
 <nav aria-label="Page navigation example">
     <ul class="pagination">
-        {% if productos.has_previous %}
+        {% if recetas.has_previous %}
       <li class="page-item">
         <a class="page-link" href="?productos={{productos.previous_page_number}}" aria-label="Previous">
           <span aria-hidden="true">&laquo;</span>
@@ -42,14 +42,14 @@
     <div class="tab-pane fade show active" id="pills-hamburguer" role="tabpanel" aria-labelledby="pills-hamburguer-tab">
         <div class="container">
             <div class="row">
-                {% for producto in productos %}
+                {% for receta in recetas %}
                 <div class="col-lg-6 pb-5 pt-3">
                     <div class="card">
-                        <img src="{{producto.image.url}}" class="card-img-top" alt="..." />
+                        <img src="{{receta.image.url}}" class="card-img-top" alt="..." />
                         <div class="card-body">
-                            <h5 class="card-title">{{producto.title}}</h5>
+                            <h5 class="card-title">{{post.title}}</h5>
                             <p class="card-text">
-                                {{producto.description}}
+                                {{post.description}}
                             </p>
                             {% if producto.link %}
                             <a href="{{producto.link}}" class="btn btn-primary">Añadir</a>
@@ -151,4 +151,4 @@
     </ul>
   </nav>
 
-{% endblock productos %}
+{% endblock recetas %}

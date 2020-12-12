@@ -37,10 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'core',
-    'contact',
     'productos.apps.ProductosConfig',
     'recetas.apps.RecetasConfig',
+    'core',
+    'contacto',
 ]
 
 MIDDLEWARE = [
@@ -127,3 +127,9 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = Path(BASE_DIR, 'media')
+
+#EmailConfig
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = 'd4f17e4ec2e801'
+EMAIL_HOST_PASSWORD = 'a8621604ddb347'
+EMAIL_PORT = '2525'
