@@ -49,9 +49,20 @@
                         <div class="card-body">
                             <h5 class="card-title">{{post.title}}</h5>
                             <p class="card-text">
-                                {{post.description}}
+                                {{receta.description}}
                             </p>
-                            {% if producto.link %}
+                            <p class="card-text">
+                              Esta receta fue añadido por {{receta.author}}
+                            </p>
+                            <p class="card-text">
+                              Esta receta fue subida el {{receta.created}}
+                            </p>
+                            <p class="card-text">
+                              Esta receta fue añadida el {{receta.updated}}
+                            </p>
+
+
+                            {% if receta.link %}
                             <a href="{{producto.link}}" class="btn btn-primary">Añadir</a>
                             {% else %}
                             <a href="{{producto.link}}" class="btn btn-primary disabled">Sin stock</a>
